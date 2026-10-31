@@ -1,0 +1,22 @@
+[package]
+name = "alloy-trie"
+version = "0.1.0"
+edition = "2021"
+authors = ["Wikialisalabs Foundation <root@wikialisalabs.axvn.vn>"]
+description = "Rayon-parallel Merkle Patricia Trie for Ethereum state root computation"
+license = "Apache-2.0"
+repository = "https://github.com/wikialisalabs/trie"
+keywords = ["ethereum", "trie", "merkle", "patricia", "state-root"]
+categories = ["cryptography::cryptocurrencies", "data-structures"]
+readme = "README.md"
+
+[features]
+default = ["std"]
+std = []
+parallel = []  # Enable rayon parallel hashing
+
+[dependencies]
+alloy-core = { path = "../core" }
+
+[dev-dependencies]
+hex-literal = "0.4"
